@@ -15,7 +15,6 @@ public class ResponseModel<T> {
     @SerializedName("error")
     private boolean error = false;
 
-    private T data;
 
     private T results;
 
@@ -35,13 +34,6 @@ public class ResponseModel<T> {
         this.message = message;
     }
 
-    public T getData() {
-        return data;
-    }
-
-    public void setData(T data) {
-        this.data = data;
-    }
 
     public boolean isSuccess() {
         return code == 1;
@@ -67,6 +59,6 @@ public class ResponseModel<T> {
 
     @Override
     public String toString() {
-        return "ResponseModel{" + "code=" + code + ", message='" + message + '\'' + ", error=" + error + ", data=" + data + ", results=" + results + '}';
+        return "ResponseModel{" + "code=" + code + ", message='" + message + '\'' + ", error=" + error  + ", results=" + results + '}';
     }
 }

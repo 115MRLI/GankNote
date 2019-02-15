@@ -93,7 +93,7 @@ public class MainPresenter implements MainContract.Presenter {
             public void onNext(ResponseModel<List<GankDataModel>> listResponseModel) {
                 LoadingDialog.dismissProgressDialog();
                 if (listResponseModel.isError() == false) {
-                    view.showInformation(listResponseModel.getData());
+                    view.showInformation(listResponseModel.getResults());
                 }
             }
 

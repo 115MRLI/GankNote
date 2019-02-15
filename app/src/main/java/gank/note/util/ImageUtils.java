@@ -25,7 +25,7 @@ import gank.note.common.Constants;
  * Created by wuxubaiyang on 16/4/18.
  */
 public class ImageUtils {
-    private final static String BASE_IMAGE_URL = Constants.BASE_URL;
+    private final static String BASE_IMAGE_URL = "";
 
     /**
      * 以路径形式展示一张圆形图片
@@ -204,6 +204,7 @@ public class ImageUtils {
         GlideRequest glideRequest = GlideApp.with(context)
                 .load(object)
                 .error(errorResId)
+                .centerCrop()
                 .placeholder(placeholderResId);
         if (null != transformation) {
             glideRequest.transform(transformation);
