@@ -86,12 +86,12 @@ public class MainPresenter implements MainContract.Presenter {
         API.get().GankApi(context).getData(type, total, page).observeOn(AndroidSchedulers.mainThread()).subscribeOn(Schedulers.io()).subscribe(new Observer<ResponseModel<List<GankDataModel>>>() {
             @Override
             public void onSubscribe(Disposable d) {
-                LoadingDialog.showProgressDialog(context, "加载中…………", false);
+//                LoadingDialog.showProgressDialog(context, "加载中…………", false);
             }
 
             @Override
             public void onNext(ResponseModel<List<GankDataModel>> listResponseModel) {
-                LoadingDialog.dismissProgressDialog();
+//                LoadingDialog.dismissProgressDialog();
                 if (listResponseModel.isError() == false) {
                     view.showInformation(listResponseModel.getResults());
                 }
@@ -105,7 +105,7 @@ public class MainPresenter implements MainContract.Presenter {
 
             @Override
             public void onComplete() {
-                LoadingDialog.dismissProgressDialog();
+//                LoadingDialog.dismissProgressDialog();
             }
         });
     }
@@ -119,7 +119,7 @@ public class MainPresenter implements MainContract.Presenter {
             super.handleMessage(msg);
             switch (msg.what) {
                 case 0:
-                    LoadingDialog.dismissProgressDialog();
+//                    LoadingDialog.dismissProgressDialog();
                     view.showDialog(wasdisconnected, new MaterialDialog.SingleButtonCallback() {
                         @Override
                         public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {

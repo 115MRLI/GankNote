@@ -13,5 +13,9 @@ public class Constants {
     //正式服务器地址
     public final static String TEST_SERVER_URL = "gank.io/";
     //基础地址
-    public final static String BASE_URL = HTTP +TEST_SERVER_URL;
+    public final static String BASE_URL = HTTP + TEST_SERVER_URL;
+    //屏幕高度
+    public static int EXACT_SCREEN_HEIGHT;
+    //屏幕宽度
+    public static int EXACT_SCREEN_WIDTH;
 }

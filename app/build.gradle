@@ -65,6 +65,8 @@ dependencies {
     //弹窗
     implementation 'com.afollestad.material-dialogs:core:0.9.4.5'
     implementation 'com.afollestad.material-dialogs:commons:0.9.4.5'
+    //展示图片
+    implementation 'com.github.chrisbanes.photoview:library:1.2.4'
 }
 configurations.all {
 

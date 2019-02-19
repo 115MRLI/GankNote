@@ -22,8 +22,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         //注册activity
         ActivityManager.get().add(this);
         super.onCreate(savedInstanceState);
-        //设置全屏样式
-        Utils.setNavigationBarStatusBar(this, true);
         //赋值TAG
         TAG = this.getClass().getSimpleName();
         //初始化变量(用户传递进来的参数)
@@ -40,9 +38,10 @@ public abstract class BaseActivity extends AppCompatActivity {
         loadData();
     }
 
+
     @Override
-    protected void onStart() {
-        super.onStart();
+    protected void onResume() {
+        super.onResume();
         //设置全屏样式
         Utils.setNavigationBarStatusBar(this, true);
     }
